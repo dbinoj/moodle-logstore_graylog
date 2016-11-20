@@ -15,7 +15,6 @@ find ../moodle_logstore_build -type d -name '.git' | xargs rm -rf
 find ../moodle_logstore_build -type f -name '.gitignore' | xargs rm -rf
 find ../moodle_logstore_build -type f -name 'composer.*' | xargs rm -rf
 find ../moodle_logstore_build -type f -name 'phpunit.*' | xargs rm -rf
-find ../moodle_logstore_build -type f -name '*.md' | xargs rm -rf
 find ../moodle_logstore_build -type f -name '*.sh' | xargs rm -rf
 
 # Creates the zip file.
