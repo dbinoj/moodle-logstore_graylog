@@ -1,0 +1,5 @@
+{
+    "require": {
+        "graylog2/gelf-php": "^1.5"
+    }
+}
