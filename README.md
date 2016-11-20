@@ -1,0 +1,1 @@
+# Graylog Logstore for Moodle
