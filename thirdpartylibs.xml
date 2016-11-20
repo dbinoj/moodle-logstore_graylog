@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<libraries>
+    <library>
+        <location>vendor</location>
+        <name>Composer dependencies</name>
+        <version></version>
+        <license>LGPL/GPL</license>
+        <licenseversion>3</licenseversion>
+    </library>
+    <library>
+        <location>vendor/graylog2/gelf-php</location>
+        <name>GELF PHP Library</name>
+        <version>1.5.1</version>
+        <license>MIT</license>
+    </library>
+</libraries>
