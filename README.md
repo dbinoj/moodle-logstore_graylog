@@ -7,6 +7,8 @@ Transport protocols TCP and UDP are supported.
 
 The array in `other` column in standard logstore is sent as a JSON string as of now. Users can use the "JSON Extractor" feature of Graylog in the `other` field to store them as separate fields in Graylog.
 
+Please use [Github Issues](https://github.com/dbinoj/moodle-logstore_graylog/issues) for bug reports, feature requests and send code contibutions as [Github Pull Requests](https://github.com/dbinoj/moodle-logstore_graylog/pulls).
+
 Installation
 --
  1. Create a new Input of type GELF UDP or GELF TCP in Graylog from the Graylog web interface at system/inputs.
