@@ -20,14 +20,20 @@
  * @package    logstore_graylog
  * @copyright  2016, Binoj David <dbinoj@gmail.com>
  * @author     Binoj David, https://www.dbinoj.com
+ * @thanks     2016, Skylar Kelty <S.Kelty@kent.ac.uk>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'logstore_graylog';
-$plugin->version = 2016112900;
-$plugin->release = '0.1 (Build: 2016112900)';
-$plugin->requires = 2014111000;
-$plugin->maturity = MATURITY_ALPHA;
-
+$tasks = array(
+    array(
+        'classname' => '\logstore_graylog\task\export_task',
+        'blocking' => 0,
+        'minute' => '*',
+        'hour' => '*',
+        'day' => '*',
+        'dayofweek' => '*',
+        'month' => '*'
+    ),
+);
