@@ -147,7 +147,7 @@ class graylog
                 }
             }
             if ($k == 'id') {
-                $k = '_id';
+                $k = 'log_id';
             }
             $newrow->$k = $v;
         }
@@ -158,7 +158,6 @@ class graylog
      * End the buffer.
      */
     public function flush() {
-        global $SITE;
 
         if (empty($this->buffer) || !$this->is_ready()) {
             return;
