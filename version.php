@@ -29,5 +29,5 @@ $plugin->component = 'logstore_graylog';
 $plugin->version = 2016112900;
 $plugin->release = '0.1 (Build: 2016112900)';
 $plugin->requires = 2014111000;
-$plugin->maturity = MATURITY_ALPHA;
+$plugin->maturity = MATURITY_STABLE;
 
