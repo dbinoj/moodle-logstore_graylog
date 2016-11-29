@@ -21,6 +21,8 @@ This plugin can operate in two modes, just like the splunk logstore plugin.
 
 Heavily inspired by the splunk logstore at https://github.com/unikent/moodle-logstore_splunk. Thanks [Skylar Kelty](mailto:S.Kelty@kent.ac.uk)!
 
+This plugin uses composer to manage dependencies and is currently dependent on [graylog2/gelf-php](https://github.com/bzikarsky/gelf-php) which is, in turn, dependent on [psr/log](https://github.com/php-fig/log). These dependencies are included with the release archive but not maintained in git. 
+
 TODO
 --
  * Implement other transports which GELF supports, such as, Kafka / AMQP, HTTP.
