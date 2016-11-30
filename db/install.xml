@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <XMLDB PATH="admin/tool/log/store/graylog/db" VERSION="20161130" COMMENT="XMLDB file for Moodle admin/tool/log/store/graylog">
+    <TABLES>
+      <TABLE NAME="logstore_graylog" COMMENT="Default comment for logstore_graylog, please edit me">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+    </TABLES>
+  </XMLDB>
