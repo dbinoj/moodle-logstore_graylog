@@ -83,8 +83,8 @@ class export_task extends \core\task\scheduled_task {
         $graylog->flush();
 
         // Update config.
-        set_config('lastentry', $lastid, 'logstore_splunk');
-        set_config('lastrun', time(), 'logstore_splunk');
+        set_config('lastentry', $lastid, 'logstore_graylog');
+        set_config('lastrun', time(), 'logstore_graylog');
 
         // Unlock.
         $lock->release();
