@@ -26,8 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'logstore_graylog';
-$plugin->version = 2016113000;
-$plugin->release = '0.2 (Build: 2016113000)';
+$plugin->version = 2016113001;
+$plugin->release = '0.3 (Build: 2016113001)';
 $plugin->requires = 2014051203;
-$plugin->maturity = MATURITY_BETA;
+$plugin->maturity = MATURITY_STABLE;
 
