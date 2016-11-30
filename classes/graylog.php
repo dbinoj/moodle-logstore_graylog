@@ -139,7 +139,6 @@ class graylog
     public static function log_standardentry($data) {
         $data = (array)$data;
         $newrow = new \stdClass();
-        $newrow->timestamp = date(\DateTime::ISO8601, $data['timecreated']);
         foreach ($data as $k => $v) {
             if ($k == 'other') {
                 $tmp = unserialize($v);
@@ -170,6 +169,7 @@ class graylog
             $log = json_decode($log, true);
             $message = new \Gelf\Message();
             $message->setShortMessage($log['eventname']);
+            $message->setTimestamp($log['timecreated']);
             foreach ($log as $k => $v) {
                 $message->setAdditional($k, $v);
             }
