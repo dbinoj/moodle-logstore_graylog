@@ -5,6 +5,8 @@ This plugin requires that you have a working Graylog node.
 Graylog can be downloaded for free from [graylog2.org](https://www.graylog.org/).
 Transport protocols TCP and UDP are supported.
 
+Log timestamp in Graylog is directly taken from moodle log entry's timecreated. Useful when importing logs from moodle to graylog in a live moodle installation.
+
 The array in `other` column in standard logstore is sent as a JSON string as of now. Users can use the "JSON Extractor" feature of Graylog in the `other` field to store them as separate fields in Graylog.
 
 Please use [Github Issues](https://github.com/dbinoj/moodle-logstore_graylog/issues) for bug reports, feature requests and send code contributions as [Github Pull Requests](https://github.com/dbinoj/moodle-logstore_graylog/pulls).
