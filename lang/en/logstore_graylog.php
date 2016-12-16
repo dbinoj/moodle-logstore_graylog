@@ -28,6 +28,8 @@ $string['pluginname_desc'] = 'A logstore plugin to ship logs to Graylog or any o
 
 $string['hostname'] = 'Graylog Input Hostname';
 $string['port'] = 'Input Port';
+$string['tcptimeout'] = 'TCP Connection Timeout';
+$string['tcptimeout_desc'] = 'Used only for TCP Transports. Seconds to wait for a TCP connection to be established before timing out. If using TCP transport in realtime mode, consider setting this to a low value so that when Graylog is not reachable, user experience is not affected severely.';
 $string['transport'] = 'Input Transport Type';
 $string['udp'] = 'GELF UDP';
 $string['tcp'] = 'GELF TCP';

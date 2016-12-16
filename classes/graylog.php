@@ -58,7 +58,9 @@ class graylog
     private function setup() {
         require_once(dirname(__FILE__) . '/../vendor/autoload.php');
         $this->config = get_config('logstore_graylog');
-        if (!isset($this->config->hostname)) {
+        $hostnameavailable = isset($this->config->hostname);
+        $portavailable = isset($this->config->port);
+        if (!$hostnameavailable or !$portavailable) {
             return false;
         }
         if ($this->config->transport == 'udp') {
@@ -73,7 +75,11 @@ class graylog
                 $this->config->hostname,
                 $this->config->port
             );
+            if (isset($this->config->tcptimeout)) {
+                $this->transport->setConnectTimeout($this->config->tcptimeout);
+            }
         }
+
         return true;
     }
 
@@ -173,7 +179,11 @@ class graylog
             foreach ($log as $k => $v) {
                 $message->setAdditional($k, $v);
             }
-            $publisher->publish($message);
+            try {
+                $publisher->publish($message);
+            } catch (\Exception $e) {
+                debugging('Cannot write to Graylog: ' . $e->getMessage(), DEBUG_DEVELOPER);
+            }
         }
         $this->buffer = array();
     }

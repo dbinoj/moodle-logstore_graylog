@@ -57,10 +57,6 @@ class export_task extends \core\task\scheduled_task {
             return false;
         }
 
-        // Safeguard.
-        $lockfactory = \core\lock\lock_config::get_lock_factory('logstore_graylog');
-        $lock = $lockfactory->get_lock('sync', 5);
-
         // Things may have changed.
         $config = (object)$DB->get_records_menu('config_plugins', array('plugin' => 'logstore_graylog'), '', 'name, value');
 
@@ -85,9 +81,6 @@ class export_task extends \core\task\scheduled_task {
         // Update config.
         set_config('lastentry', $lastid, 'logstore_graylog');
         set_config('lastrun', time(), 'logstore_graylog');
-
-        // Unlock.
-        $lock->release();
 
         return true;
     }

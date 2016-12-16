@@ -54,6 +54,12 @@ if ($hassiteconfig) {
         'tcp' => new lang_string('tcp', 'logstore_graylog')
     )));
 
+    $settings->add(new admin_setting_configtext(
+        'logstore_graylog/tcptimeout',
+        new lang_string('tcptimeout', 'logstore_graylog'),
+        new lang_string('tcptimeout_desc', 'logstore_graylog'), '30', PARAM_INT
+    ));
+
     $settings->add(new admin_setting_configselect(
         'logstore_graylog/mode',
         new lang_string('mode', 'logstore_graylog'),
