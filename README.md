@@ -19,7 +19,7 @@ Installation
 
 This plugin can operate in two modes, just like the splunk logstore plugin.
  * Realtime -> Logs are sent to graylog as soon as they happen.
- * Background -> Logs are stored in standard logstore and new log entries are sent to graylog once every minute during cron run.
+ * Background -> Logs are stored in standard logstore and new log entries are sent to graylog once every minute during cron run. Background mode can be used to import existing logs into graylog. Graylog Logstore ships the old logs in batches to Graylog every minute. Once the import is done (check reports->graylog), you can switch back to realtime.
 
 Heavily inspired by the splunk logstore at https://github.com/unikent/moodle-logstore_splunk. Thanks [Skylar Kelty](mailto:S.Kelty@kent.ac.uk)!
 
